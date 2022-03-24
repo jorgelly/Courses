@@ -1,5 +1,3 @@
-const { resolve } = require('path');
-
 module.exports = {
   entry: './app/index.js',
   output: {
@@ -12,8 +10,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /jsx?$/,
-        include: resolve(__dirname, './app'),
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-react']
