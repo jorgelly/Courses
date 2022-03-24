@@ -1,11 +1,11 @@
 module.exports = {
-  entry: './app/index.js',
+  entry: [
+    './app/index.js'
+  ],
   output: {
     path: __dirname,
     filename: './public/bundle.js'
   },
-  mode: 'development',
-  context: __dirname,
   devtool: 'source-map',
   module: {
     rules: [
@@ -18,7 +18,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           'style-loader',
           'css-loader'
