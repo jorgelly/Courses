@@ -12,7 +12,7 @@ if (process.env.DATABASE_URL) {
   };
 };
 
-const dbName = 'canoe-courses'
+const dbName = 'choices'
 console.log(`Opening database connection to ${dbName}`);
 const db = new Sequelize(process.env.DATABASE_URL || `postgres://localhost:5432/${dbName}`, config);
 
