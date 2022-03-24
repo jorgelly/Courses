@@ -21,7 +21,6 @@ export const createCourse = (course) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.post('/api/courses', course);
-      console.log(data);
       dispatch(createdCourse(data));
     } catch (error) {
       console.log(error);
