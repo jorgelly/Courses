@@ -38,15 +38,15 @@ const App = () => {
     <div className="container">
       <form className='form-choices' onSubmit={handleSubmit}>
         <h2>Choose Your Courses</h2>
-        <div classname='form-containers'>
+        <div className='form-containers'>
           <label htmlFor='choiceOne'>Course 1: </label>
           <input className='form-input' name='choiceOne' value={choiceOne} onChange={(e) => setChoiceOne(e.target.value)} />
         </div><br />
-        <div classname='form-containers'>
+        <div className='form-containers'>
           <label htmlFor='choiceTwo'>Course 2: </label>
           <input className='form-input' name='choiceTwo' value={choiceTwo} onChange={(e) => setChoiceTwo(e.target.value)} />
         </div><br />
-        <div classname='form-containers'>
+        <div className='form-containers'>
           <label htmlFor='choiceThree'>Course 3: </label>
           <input className='form-input' name='choiceThree' value={choiceThree} onChange={(e) => setChoiceThree(e.target.value)} />
         </div><br/>
