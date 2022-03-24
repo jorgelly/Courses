@@ -16,3 +16,6 @@ table, th, td {
   height: 25px
 }
 
+#error {
+  color: red;
+}

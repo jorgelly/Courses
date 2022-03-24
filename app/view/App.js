@@ -52,7 +52,7 @@ const App = () => {
         </div><br/>
         <input className='form-input' type='submit' value='Submit' />
       </form>
-      {error && <h3>One course must be calculus</h3>}
+      {error && <h3 id="error">One course must be calculus</h3>}
       {submitted && <h3>Your courses have been submitted</h3>}
       <br />
       <div>
