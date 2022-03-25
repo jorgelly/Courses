@@ -23,4 +23,14 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+router.delete('/:id', async (req, res, next) => {
+  try {
+    const deletedCourse = await Course.findByPk(req.params.id);
+    await deletedCourse.destroy();
+    res.json(deletedCourse);
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { createCourse } from '../store/courses';
 import { fetchCourses } from '../store/courses';
+import { deleteCourse } from '../store/courses';
 
 const App = () => {
   const [choiceOne, setChoiceOne] = useState('');
@@ -34,6 +35,10 @@ const App = () => {
     }
   }
 
+  const handleDelete = (id) => {
+    dispatch(deleteCourse(id));
+  }
+
   return (
     <div className="container">
       <form className='form-choices' onSubmit={handleSubmit}>
@@ -50,7 +55,7 @@ const App = () => {
           <label htmlFor='choiceThree'>Course 3: </label>
           <input className='form-input' name='choiceThree' value={choiceThree} onChange={(e) => setChoiceThree(e.target.value)} />
         </div><br/>
-        <input className='form-input' type='submit' value='Submit' />
+        <input id="form-button" className='form-input' type='submit' value='Submit' />
       </form>
       {error && <h3 id="error">One course must be calculus</h3>}
       {submitted && <h3>Your courses have been submitted</h3>}
@@ -68,10 +73,11 @@ const App = () => {
           {courses && courses.map(element => (
           <tbody key={element.id}>
             <tr>
-              <td>{element.id}</td>
+              <td>{courses.indexOf(element) + 1}</td>
               <td>{element.choiceOne}</td>
               <td>{element.choiceTwo}</td>
               <td>{element.choiceThree}</td>
+              <td><button id="delete-button" onClick={() => handleDelete(element.id)}>X</button></td>
             </tr>
           </tbody>
           ))}

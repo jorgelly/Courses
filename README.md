@@ -1,7 +1,9 @@
 # Courses
   Question two of assessment
 
-# Test Instructions
+# Link to Web App to test rubrics
+  https://courses-jorgelly.herokuapp.com/
+# Local Test Instructions
   - Fork and then clone repository
   - run: npm install
   - run: createdb choices

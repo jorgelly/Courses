@@ -6,8 +6,20 @@
 }
 table, th, td {
   border: 1px solid black;
-  padding: 15px;
+  /* padding: 15px; */
   border-radius: 5px;
+  text-align: center;
+}
+
+th {
+  width: 75px;
+  /* padding: 0px; */
+}
+
+td {
+  width: 75px;
+  height: 50px;
+  /* padding: 0px; */
 }
 
 .form-input {
@@ -19,3 +31,15 @@ table, th, td {
 #error {
   color: red;
 }
+
+#delete-button {
+  border-radius: 5px;
+  padding: 15px;
+  width: 75px;
+}
+
+#form-button {
+  width: 75px;
+  height: 35px;
+}
+
