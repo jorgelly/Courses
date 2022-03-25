@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -w --mode=development",
-    "build:dev": "npm run build",
+    "build": "webpack",
+    "build:dev": "npm run build --watch --mode=development",
     "start": "node server",
     "start:dev": "npm run build:dev & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore app"
